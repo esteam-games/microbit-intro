@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the micro:bit! 🚀</title>
+
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/sky.css">
+
+    <!-- Custom CSS -->
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+
+        .reveal {
+            font-size: 36px;
+        }
+
+        .microbit-highlight {
+            color: #00D9E0;
+            font-weight: bold;
+        }
+
+        .big-emoji {
+            font-size: 80px;
+        }
+
+        .reveal img {
+            border: none;
+            box-shadow: none;
+        }
+
+        .two-column {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .two-column > * {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Title Slide -->
+            <section>
+                <h1>Welcome to <span class="microbit-highlight">micro:bit</span>!</h1>
+                <p class="big-emoji">🎮 💻 🤖</p>
+                <p>Let's build amazing games together!</p>
+            </section>
+
+            <!-- Slide 1: What is a micro:bit? (with nested slide) -->
+            <section>
+                <section>
+                    <h2>What is a <span class="microbit-highlight">micro:bit</span>?</h2>
+                    <p class="big-emoji">🤔</p>
+                    <p style="font-size: 0.7em; margin-top: 2em; opacity: 0.7;">Press ↓ to learn more</p>
+                </section>
+
+                <section>
+                    <h2>micro:bit is ...</h2>
+                    <ul style="font-size: 0.8em; line-height: 1.6;">
+                        <li>A tiny programmable computer</li>
+                        <li>Small enough to fit in your palm</li>
+                        <li>Made for learning and having fun</li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- Slide 2: What can you do with it? (with nested slide) -->
+            <section>
+                <section>
+                    <h2>What can you do with it?</h2>
+                    <p class="big-emoji">🎨 🎮 🔬</p>
+                </section>
+
+                <section>
+                    <h2>Build Amazing Things!</h2>
+                    <ul style="font-size: 0.75em; line-height: 1.8;">
+                        <li>🎮 Make games</li>
+                        <li>🎵 Create music</li>
+                        <li>🤖 Build robots</li>
+                        <li>🌡️ Measure hot or cold</li>
+                        <li>🧭 Build a digital compass</li>
+                        <li>💡 Create animations</li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- Slide 3: Parts of the micro:bit (with nested slides showing images) -->
+            <section>
+                <section>
+                    <h2>Parts of the micro:bit</h2>
+                    <p class="big-emoji">🔍</p>
+                </section>
+
+                <section>
+                    <h3>Front Side</h3>
+                    <img src="assets/microbit-front.png" alt="micro:bit front" style="max-height: 550px; max-width: 90%;">
+                </section>
+
+                <section>
+                    <h3>Back Side</h3>
+                    <img src="assets/microbit-back.png" alt="micro:bit back" style="max-height: 550px; max-width: 90%;">
+                </section>
+            </section>
+
+            <!-- Setup: Join the Classroom -->
+            <section>
+                <section>
+                    <h2>Let's Get Started! 🚀</h2>
+                    <p class="big-emoji">📱</p>
+                    <p style="font-size: 0.8em;">Join the classroom to code together!</p>
+                    <p style="font-size: 0.7em; margin-top: 2em; opacity: 0.7;">Press ↓ for joining instructions</p>
+                </section>
+
+                <section>
+                    <h3>Scan to Join! 📱</h3>
+                    <img src="assets/class-room-qrc.png" alt="Classroom QR Code" style="max-width: 60%; max-height: 600px; margin: 2em auto;">
+                    <p style="font-size: 0.8em; margin-top: 1.5em;">Scan this QR code with your device to join the classroom!</p>
+                    <p style="font-size: 0.65em; margin-top: 1em; opacity: 0.7;">Can't scan? Press ↓ for manual join details</p>
+                </section>
+
+                <section>
+                    <h3>Manual Join Details 🔑</h3>
+                    <img src="assets/class-room-details.png" alt="Classroom Join Details" style="max-width: 90%; max-height: 600px;">
+                    <p style="font-size: 0.65em; margin-top: 1em; opacity: 0.7;">Go to <strong>microbit.org/join</strong> and enter the classroom details above</p>
+                </section>
+            </section>
+
+            <!-- Game 1: Blinking Heart -->
+            <section>
+                <section>
+                    <h2>Game 1: Blinking Heart</h2>
+                    <p class="big-emoji">💗</p>
+                    <p style="font-size: 0.8em;">Bring games to life!</p>
+                </section>
+
+                <section>
+                    <h3>What is it?</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>Make a heart appear and disappear on the LED display</li>
+                        <li>Your first animation!</li>
+                        <li>Learn how to control the LED lights</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>MakeCode Blocks 🧱</h3>
+                    <img src="assets/blinking-heart.gif" alt="Blinking Heart Blocks" style="max-width: 80%; max-height: 500px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <p style="font-size: 0.65em; margin-top: 1em; font-style: italic;">Drag and drop blocks to create your program!</p>
+
+                    <aside class="notes">
+                        <pre><code>basic.forever(function () {
+    basic.showIcon(IconNames.Heart)
+    basic.pause(500)
+    basic.clearScreen()
+    basic.pause(500)
+})</code></pre>
+                    </aside>
+                </section>
+
+            </section>
+
+            <!-- Game 2: Coin Flipper -->
+            <section>
+                <section>
+                    <h2>Game 2: Coin Flipper</h2>
+                    <p class="big-emoji">🪙</p>
+                    <p style="font-size: 0.8em;">Heads or Tails?</p>
+                </section>
+
+                <section>
+                    <h3>What is it?</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>Coin toss when you don't find a coin? No problem!</li>
+                        <li>Touch the micro:bit logo to flip a coin</li>
+                        <li>Get either Heads (H) or Tails (T)</li>
+                        <li>Perfect for making decisions!</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>What you'll learn:</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>👆 Using the touch logo sensor</li>
+                        <li>🎲 Creating random true/false values</li>
+                        <li>🔀 Using if/else statements</li>
+                        <li>💡 Lighting up all LEDs for effect</li>
+                    </ul>
+                    <p style="font-size: 0.7em; margin-top: 1em; font-style: italic;">No more lost coins - flip digitally!</p>
+                </section>
+
+                <section>
+                    <h3>MakeCode Blocks 🧱</h3>
+                    <img src="assets/coin-toss.gif" alt="Coin Flipper Blocks" style="max-width: 80%; max-height: 500px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <p style="font-size: 0.65em; margin-top: 1em; font-style: italic;">Touch the logo and watch it flip!</p>
+
+                    <aside class="notes">
+                        <pre><code>input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    basic.showLeds(`
+        # # # # #
+        # # # # #
+        # # # # #
+        # # # # #
+        # # # # #
+        `)
+    basic.pause(200)
+    if (Math.randomBoolean()) {
+        basic.showString("H")
+    } else {
+        basic.showString("T")
+    }
+})</code></pre>
+                    </aside>
+                </section>
+            </section>
+
+            <!-- Game 3: Magic 8 Ball -->
+            <section>
+                <section>
+                    <h2>Game 3: Magic 8 Ball</h2>
+                    <p class="big-emoji">🎱</p>
+                    <p style="font-size: 0.8em;">Ask a question, shake for an answer!</p>
+                    <p style="font-size: 0.7em; margin-top: 2em; opacity: 0.7;">Press ↓ to learn more</p>
+                </section>
+
+                <section>
+                    <h3>How it works:</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>Ask a yes/no question</li>
+                        <li>Shake the micro:bit</li>
+                        <li>Get a random answer from the Magic 8 Ball!</li>
+                        <li>Answers like "Yes", "No", "Maybe", "Ask again"</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>What you'll learn:</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>📱 Using the shake sensor</li>
+                        <li>🎲 Generating random numbers</li>
+                        <li>🔀 Using if/else if statements</li>
+                        <li>💬 Displaying different text messages</li>
+                    </ul>
+                    <p style="font-size: 0.7em; margin-top: 1em; font-style: italic;">Just like the classic toy, but programmable!</p>
+                </section>
+
+                <section>
+                    <h3>MakeCode Blocks 🧱</h3>
+                    <img src="assets/magic-8-ball.gif" alt="Magic 8 Ball Blocks" style="max-width: 80%; max-height: 500px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <p style="font-size: 0.65em; margin-top: 1em; font-style: italic;">Shake it and see what the future holds!</p>
+
+                    <aside class="notes">
+                        <pre><code>input.onGesture(Gesture.Shake, function () {
+    let choice = randint(1, 6)
+    if (choice == 1) {
+        basic.showString("Yes")
+    } else if (choice == 2) {
+        basic.showString("No")
+    } else if (choice == 3) {
+        basic.showString("Maybe")
+    } else if (choice == 4) {
+        basic.showString("Ask again")
+    } else if (choice == 5) {
+        basic.showString("Definitely")
+    } else {
+        basic.showString("Unlikely")
+    }
+})</code></pre>
+                    </aside>
+                </section>
+            </section>
+
+            <!-- Game 4: Clap the Loudest -->
+            <section>
+                <section>
+                    <h2>Game 4: Clap the Loudest</h2>
+                    <p class="big-emoji">👏</p>
+                    <p style="font-size: 0.8em;">Who can make the most noise?</p>
+                    <p style="font-size: 0.7em; margin-top: 2em; opacity: 0.7;">Press ↓ to learn more</p>
+                </section>
+
+                <section>
+                    <h3>How to play:</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>Press button A to start measuring</li>
+                        <li>Clap as loud as you can!</li>
+                        <li>The micro:bit shows the loudness level</li>
+                        <li>Compete with friends to see who's loudest!</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>What you'll learn:</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>🎤 Using the built-in microphone</li>
+                        <li>📊 Measuring sound levels</li>
+                        <li>🏆 Creating competitive challenges</li>
+                    </ul>
+                    <p style="font-size: 0.7em; margin-top: 1em; font-style: italic;">Perfect for parties and group activities!</p>
+                </section>
+
+                <section>
+                    <h3>MakeCode Blocks 🧱</h3>
+                    <img src="assets/loudest.gif" alt="Clap the Loudest Blocks" style="max-width: 80%; max-height: 500px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <p style="font-size: 0.65em; margin-top: 1em; font-style: italic;">The loudest sound wins!</p>
+
+                    <aside class="notes">
+                        <pre><code>input.onButtonPressed(Button.A, function () {
+    basic.showString("GO!")
+    basic.pause(500)
+    let maxSound = 0
+
+    for (let i = 0; i < 100; i++) {
+        let soundLevel = input.soundLevel()
+        if (soundLevel > maxSound) {
+            maxSound = soundLevel
+        }
+        basic.pause(10)
+    }
+
+    basic.showNumber(maxSound)
+})</code></pre>
+                    </aside>
+                </section>
+            </section>
+
+            <!-- Game 5: Tilt Sensor Challenge -->
+            <section>
+                <section>
+                    <h2>Game 5: Steady Hand Challenge</h2>
+                    <p class="big-emoji">⚖️</p>
+                    <p style="font-size: 0.8em;">Don't tilt it!</p>
+                    <p style="font-size: 0.7em; margin-top: 2em; opacity: 0.7;">Press ↓ to learn more</p>
+                </section>
+
+                <section>
+                    <h3>The Challenge:</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>Carry the micro:bit from Point A to Point B</li>
+                        <li>Keep it perfectly level</li>
+                        <li>If you tilt it too much... ALARM! 🚨</li>
+                        <li>Can you complete the course without triggering it?</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>What you'll learn:</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>🎚️ Reading tilt and angle sensors</li>
+                        <li>📊 Working with sensor data</li>
+                        <li>🔊 Making sounds and alarms</li>
+                        <li>⚡ Creating if/then conditions</li>
+                    </ul>
+                    <p style="font-size: 0.7em; margin-top: 1em; font-style: italic;">Race your friends to see who has the steadiest hand!</p>
+                </section>
+
+                <section>
+                    <h3>MakeCode Blocks 🧱</h3>
+                    <img src="assets/steady-hand.gif" alt="Steady Hand Challenge Blocks" style="max-width: 80%; max-height: 500px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <p style="font-size: 0.65em; margin-top: 1em; font-style: italic;">The OR operator (||) checks if tilted in either direction!</p>
+
+                    <aside class="notes">
+                        <pre><code>basic.forever(function () {
+    let tilt = input.acceleration(Dimension.X)
+
+    if (tilt > 200 || tilt < -200) {
+        music.playTone(262, 100)
+        basic.showIcon(IconNames.Sad)
+    } else {
+        basic.showIcon(IconNames.Happy)
+    }
+    basic.pause(100)
+})</code></pre>
+                    </aside>
+                </section>
+            </section>
+
+            <!-- Game 6: Design Your Board Game -->
+            <section>
+                <section>
+                    <h2>Game 6: Design Your Board Game</h2>
+                    <p class="big-emoji">🎨 🎲</p>
+                    <p style="font-size: 0.8em;">Create your own adventure!</p>
+                    <p style="font-size: 0.7em; margin-top: 2em; opacity: 0.7;">Press ↓ to learn more</p>
+                </section>
+
+                <section>
+                    <h3>What you'll get:</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>📄 2 post its for game tiles</li>
+                        <li>🟦 Tiny squares to create your game piece</li>
+                        <li>🎲 Your micro:bit as the smart dice!</li>
+                        <li>✏️ Your imagination to design the adventure</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>How to build it:</h3>
+                    <ul style="font-size: 0.7em; line-height: 1.8; text-align: left;">
+                        <li>🎯 <strong>Goal:</strong> Create a 20-step path from start to finish</li>
+                        <li>🎨 <strong>Design 2 tiles:</strong> One with a GOOD effect, one with a BAD effect</li>
+                        <li>📝 Examples: "Move ahead 2 spaces!" or "Go back 1 space!"</li>
+                        <li>🟦 <strong>Arrange tiles:</strong> Mix everyone's tiles to create the 20-step path</li>
+                        <li>🎲 <strong>Place micro:bit:</strong> Put it in the center as your smart dice</li>
+                        <li>♟️ <strong>Add game pieces:</strong> Choose your piece to move along the path</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>How to play:</h3>
+                    <ul style="font-size: 0.7em; line-height: 1.8; text-align: left;">
+                        <li>1️⃣ Press Button A to roll the micro:bit dice (1-6)</li>
+                        <li>2️⃣ Move your game piece that many spaces forward</li>
+                        <li>3️⃣ Follow the instruction on the tile you land on!</li>
+                        <li>4️⃣ Good tiles help you, bad tiles challenge you!</li>
+                        <li>5️⃣ First player to reach step 20 wins! 🏆</li>
+                    </ul>
+                    <p style="font-size: 0.7em; margin-top: 1em; font-style: italic;">Your creative tiles make every game unique and exciting!</p>
+                </section>
+
+                <section>
+                    <h3>What you'll learn:</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>🎮 Game design and creativity</li>
+                        <li>🔘 Programming button controls</li>
+                        <li>🎲 Combining tech with hands-on crafts</li>
+                        <li>👥 Creating games others can enjoy</li>
+                        <li>💡 Thinking like an inventor and designer</li>
+                    </ul>
+                    <p style="font-size: 0.7em; margin-top: 1em; font-style: italic;">The best part? You can play it over and over with friends!</p>
+                </section>
+
+                <section>
+                    <h3>MakeCode Blocks 🧱</h3>
+                    <p style="font-size: 0.75em; margin-bottom: 1em;">Press button A to roll a dice (1-6) for your board game!</p>
+                    <img src="assets/dice.gif" alt="Dice Roller Blocks" style="max-width: 80%; max-height: 500px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <p style="font-size: 0.65em; margin-top: 1em; font-style: italic;">Build it in blocks and use it in your game!</p>
+
+                    <aside class="notes">
+                        <pre><code>input.onButtonPressed(Button.A, function () {
+    let roll = randint(1, 6)
+    basic.showNumber(roll)
+    basic.pause(2000)
+    basic.clearScreen()
+})</code></pre>
+                    </aside>
+                </section>
+            </section>
+
+            <!-- More Games to Explore! -->
+            <section>
+                <section>
+                    <h2>More Games to Explore! 🚀</h2>
+                    <p class="big-emoji">🎮</p>
+                    <p style="font-size: 0.8em;">Try these challenges at home!</p>
+                </section>
+
+                <section>
+                    <h3>More fun games to build 🌟</h3>
+                    <div style="font-size: 0.75em; line-height: 2; text-align: left;">
+                        <ul>
+                            <li>💥 <strong>Meteor Shower</strong> - Dodge falling meteors with tilt controls!</li>
+                            <li>🐦 <strong>Flappy Bird</strong> - Tap to fly, avoid obstacles!</li>
+                            <li>🥢 <strong>Chopstick Challenge</strong> - Balance the micro:bit using chopsticks!</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Keep Creating! 💡</h3>
+                    <div style="font-size: 0.8em; line-height: 1.8;">
+                        <p>You've learned the basics - now it's time to:</p>
+                        <ul style="text-align: left; margin-top: 1em;">
+                            <li>✨ Invent your own games</li>
+                            <li>🔧 Combine different sensors in creative ways</li>
+                            <li>🤝 Share your projects with friends</li>
+                            <li>📚 Explore tutorials at microbit.org</li>
+                        </ul>
+                        <p style="margin-top: 1.5em; font-size: 1.2em; color: #00D9E0;"><strong>The possibilities are endless!</strong></p>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Summary Slide -->
+            <section>
+                <section>
+                    <h2>What We Learned! 🎓</h2>
+                    <p class="big-emoji">🎉</p>
+                    <p style="font-size: 0.8em;">Look how much you've mastered!</p>
+                    <p style="font-size: 0.7em; margin-top: 2em; opacity: 0.7;">Press ↓ to see the summary</p>
+                </section>
+
+                <section>
+                    <h3>micro:bit Parts We Used 🔧</h3>
+                    <div style="font-size: 0.7em; line-height: 1.8; text-align: left;">
+                        <ul style="column-count: 2; column-gap: 2em;">
+                            <li>💡 <strong>LED Display</strong> - Showing hearts, numbers, patterns</li>
+                            <li>👆 <strong>Touch Logo</strong> - Coin flipping with touch</li>
+                            <li>🔘 <strong>Buttons A & B</strong> - Dice rolling, memory game</li>
+                            <li>📱 <strong>Accelerometer</strong> - Detecting shakes and tilts</li>
+                            <li>🔊 <strong>Speaker</strong> - Making alarms and sounds</li>
+                            <li>🎲 <strong>Random Generator</strong> - Creating unpredictable fun</li>
+                        </ul>
+                    </div>
+                    <p style="font-size: 0.6em; margin-top: 1.5em; font-style: italic;">Every game used different parts - you explored the whole micro:bit!</p>
+                </section>
+
+                <section>
+                    <h3>You're Now a Gamer, Coder, Thinker, Game Developer! 🚀</h3>
+                    <div style="font-size: 0.75em; line-height: 1.8;">
+                        <p>You've learned to:</p>
+                        <ul style="text-align: left; margin-top: 1em;">
+                            <li>✨ Create animations and displays</li>
+                            <li>🎮 Build interactive games</li>
+                            <li>🔧 Use sensors to read the world</li>
+                            <li>🧠 Think logically and solve problems</li>
+                            <li>🎨 Combine creativity with technology</li>
+                        </ul>
+                        <p style="margin-top: 1.5em; font-size: 1.2em; color: #00D9E0;"><strong>What will YOU create next?</strong></p>
+                    </div>
+                </section>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Reveal.js JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/notes/notes.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            backgroundTransition: 'fade',
+            width: 1280,
+            height: 720,
+            margin: 0.1,
+            center: true,
+            controls: true,
+            progress: true,
+            slideNumber: true,
+            plugins: [RevealNotes]
+        });
+    </script>
+</body>
+</html>

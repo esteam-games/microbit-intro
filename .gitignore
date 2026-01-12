@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Package manager files
+package-lock.json
+package.json
+
+# Test and development files
+capture*.js
+test*.js
+screenshot*.js
+manual-approach.md
+
+# Test screenshots
+game*.png
+step*.png
+
+# OS files
+.DS_Store
+.claude/
+
+# Editor files
+*.swp
+*.swo
+*~
