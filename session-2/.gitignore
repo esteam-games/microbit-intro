@@ -1,0 +1,6 @@
+scripts/node_modules/
+scripts/.frames/
+.playwright-mcp/
+assets/debug-*
+assets/class-full-debug.png
+scripts/assets/

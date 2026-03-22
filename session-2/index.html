@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>micro:bit Pixel Art Animations! 🎨</title>
+
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/sky.css">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Fill any letterbox gaps with the sky theme colour */
+        html, body {
+            background: #add9e4;
+            background: radial-gradient(ellipse at center, #e4f0fb 0%, #add9e4 100%);
+        }
+
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+
+        .reveal {
+            font-size: 36px;
+        }
+
+        .microbit-highlight {
+            color: #00D9E0;
+            font-weight: bold;
+        }
+
+        .big-emoji {
+            font-size: 80px;
+        }
+
+        .reveal img {
+            border: none;
+            box-shadow: none;
+        }
+
+        .two-column {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .two-column > * {
+            flex: 1;
+        }
+
+        .concept-box {
+            background: rgba(0, 217, 224, 0.1);
+            border-left: 4px solid #00D9E0;
+            padding: 0.5em 1em;
+            margin: 0.5em 0;
+            text-align: left;
+        }
+
+        .grid-blank {
+            font-family: monospace;
+            background: #f0f0f0;
+            padding: 0.8em 1.2em;
+            border-radius: 6px;
+            line-height: 2;
+            font-size: 1.1em;
+            letter-spacing: 0.3em;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Title Slide -->
+            <section>
+                <h1><span class="microbit-highlight">micro:bit</span> Pixel Art Animations!</h1>
+                <p class="big-emoji">🎨 ✨ 🎬</p>
+                <p>Session 2: Become a Pixel Artist!</p>
+            </section>
+
+            <!-- Quick Recap -->
+            <section>
+                <section>
+                    <h2>Welcome Back! 🎉</h2>
+                    <p class="big-emoji">👋</p>
+                    <p style="font-size: 0.8em;">Remember what we learned last time?</p>
+                    <p style="font-size: 0.7em; margin-top: 2em; opacity: 0.7;">Press ↓ for a quick recap</p>
+                </section>
+
+                <section>
+                    <h3>Session 1 Recap</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>💗 Blinking Heart - Our first animation!</li>
+                        <li>🪙 Coin Flipper - Touch sensor magic</li>
+                        <li>🎱 Magic 8 Ball - Shake for answers</li>
+                        <li>👏 Clap the Loudest - Microphone fun</li>
+                        <li>⚖️ Steady Hand - Tilt sensor challenge</li>
+                        <li>🎲 Board Game Dice - Button controls</li>
+                    </ul>
+                    <p style="font-size: 0.7em; margin-top: 1em; color: #00D9E0;"><strong>Today: We become Pixel Artists!</strong></p>
+                </section>
+            </section>
+
+            <!-- Game 1: Animated Pet -->
+            <section>
+                <section>
+                    <h2>Game 1: Animated Pet 🐾</h2>
+                    <p class="big-emoji">🐾</p>
+                    <p style="font-size: 0.8em;">Your micro:bit pet listens to sound!</p>
+                    <p style="font-size: 0.7em; margin-top: 2em; opacity: 0.7;">Press ↓ to learn more</p>
+                </section>
+
+                <section>
+                    <h3>Meet Your Digital Pet!</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>🔇 <strong>Quiet room</strong> = Asleep (it's peaceful!)</li>
+                        <li>😲 <strong>Medium noise</strong> = Surprised (what's that sound?)</li>
+                        <li>😢 <strong>Very loud</strong> = Sad (too noisy!)</li>
+                        <li>Your pet reacts to the sounds around it!</li>
+                    </ul>
+                    <p style="font-size: 0.7em; margin-top: 1em; font-style: italic;">Can you keep your pet happy by staying quiet?</p>
+                </section>
+
+                <section>
+                    <h3>What you'll learn:</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>🎤 Using the microphone / sound sensor</li>
+                        <li>🔀 Multiple if/else conditions</li>
+                        <li>😊 Displaying different animated faces</li>
+                        <li>🔄 Continuous checking with "forever" loop</li>
+                    </ul>
+                    <div class="concept-box" style="font-size: 0.7em; margin-top: 1em;">
+                        <strong>Programming Concept:</strong> Sensors let your code react to the real world!
+                    </div>
+                </section>
+
+                <section>
+                    <h3>The Challenge! 🎤</h3>
+                    <div style="font-size: 0.75em; line-height: 1.8;">
+                        <p><strong>Experiment Time:</strong></p>
+                        <ul style="text-align: left;">
+                            <li>1️⃣ Stay perfectly quiet — watch your pet sleep peacefully!</li>
+                            <li>2️⃣ Talk normally — your pet looks surprised!</li>
+                            <li>3️⃣ Shout or clap loudly — your pet gets sad!</li>
+                        </ul>
+                        <p style="margin-top: 1em; color: #00D9E0;"><strong>Can the whole class keep the pet happy for 10 seconds?</strong></p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>MakeCode Blocks 🧱</h3>
+                    <div style="text-align: center; margin-top: 0.5em;">
+                        <img src="assets/animated-pet-blocks.png" alt="Animated Pet Blocks" style="max-width: 90%; max-height: 520px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <p style="font-size: 0.5em; margin-top: 0.3em; font-style: italic; opacity: 0.8;">The blocks code</p>
+                    </div>
+
+                    <aside class="notes">
+                        <pre><code>basic.forever(function () {
+    let noise = input.soundLevel()
+    if (noise > 150) {
+        basic.showIcon(IconNames.Sad)
+    } else if (noise > 60) {
+        basic.showIcon(IconNames.Surprised)
+    } else {
+        basic.showIcon(IconNames.Asleep)
+    }
+    basic.pause(200)
+})</code></pre>
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>See It In Action! 🎮</h3>
+                    <div style="text-align: center; margin-top: 0.5em;">
+                        <img src="assets/animated-pet-sim.gif" alt="Animated Pet Running" style="max-width: 70%; max-height: 480px; border-radius: 8px; border: 3px solid #00D9E0;">
+                        <p style="font-size: 0.5em; margin-top: 0.3em; font-style: italic; opacity: 0.8;">Live on the micro:bit!</p>
+                    </div>
+                    <p style="font-size: 0.6em; margin-top: 0.5em; font-style: italic;">Your pet reacts to noise in real-time!</p>
+                </section>
+            </section>
+
+            <!-- Game 2: Fireworks Display -->
+            <section>
+                <section>
+                    <h2>Game 2: Fireworks Display 🎆</h2>
+                    <p class="big-emoji">🎆</p>
+                    <p style="font-size: 0.8em;">Create explosive light shows!</p>
+                    <p style="font-size: 0.7em; margin-top: 2em; opacity: 0.7;">Press ↓ to learn more</p>
+                </section>
+
+                <section>
+                    <h3>How Fireworks Work</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>🔘 Press Button A to launch!</li>
+                        <li>🚀 A single LED lights up — the rocket!</li>
+                        <li>💥 BOOM! A big pattern fills the whole screen</li>
+                        <li>🌑 Screen clears — ready for the next launch!</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Programming Concepts</h3>
+                    <div style="font-size: 0.7em; line-height: 1.8; text-align: left;">
+                        <div class="concept-box">
+                            <strong>🔘 Button Event:</strong> Code runs when Button A is pressed
+                        </div>
+                        <div class="concept-box">
+                            <strong>🎞️ Animation Frames:</strong> Show different LED patterns one after another
+                        </div>
+                        <div class="concept-box">
+                            <strong>⏱️ Timing:</strong> Pauses (basic.pause) control how long each frame shows
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>MakeCode Blocks 🧱</h3>
+                    <div style="text-align: center; margin-top: 0.5em;">
+                        <img src="assets/fireworks-blocks.png" alt="Fireworks Blocks" style="max-width: 90%; max-height: 520px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <p style="font-size: 0.5em; margin-top: 0.3em; font-style: italic; opacity: 0.8;">The blocks code</p>
+                    </div>
+
+                    <aside class="notes">
+                        <pre><code>input.onButtonPressed(Button.A, function () {
+    // The rocket!
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+    `)
+    basic.pause(300)
+
+    // BOOM!
+    basic.showLeds(`
+        # . # . #
+        . # # # .
+        # # # # #
+        . # # # .
+        # . # . #
+    `)
+    basic.pause(400)
+
+    basic.clearScreen()
+})</code></pre>
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>See It In Action! 🎮</h3>
+                    <div style="text-align: center; margin-top: 0.5em;">
+                        <img src="assets/fireworks-sim.gif" alt="Fireworks Running" style="max-width: 70%; max-height: 480px; border-radius: 8px; border: 3px solid #00D9E0;">
+                        <p style="font-size: 0.5em; margin-top: 0.3em; font-style: italic; opacity: 0.8;">Live on the micro:bit!</p>
+                    </div>
+                    <p style="font-size: 0.6em; margin-top: 0.5em; font-style: italic;">Press Button A to launch fireworks!</p>
+                </section>
+            </section>
+
+            <!-- What is Animation? -->
+            <section>
+                <section>
+                    <h2>What is Animation? 🎬</h2>
+                    <p class="big-emoji">🎞️</p>
+                    <p style="font-size: 0.7em; margin-top: 2em; opacity: 0.7;">Press ↓ to discover the secret</p>
+                </section>
+
+                <section>
+                    <h3>The Secret of Animation</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>Animation = Many pictures shown quickly!</li>
+                        <li>Each picture is called a <strong>"frame"</strong></li>
+                        <li>Show frames fast = things look like they move!</li>
+                        <li>Movies show 24 frames per second</li>
+                    </ul>
+                    <p style="font-size: 0.8em; margin-top: 1em;">Our micro:bit has <span class="microbit-highlight">25 LEDs</span> (5x5 grid) to animate!</p>
+                </section>
+
+                <section>
+                    <h3 style="font-size: 0.9em; margin-bottom: 0.2em;">15 Still Photos 📸</h3>
+                    <p style="font-size: 0.45em; margin: 0 0 0.4em; opacity: 0.7;">
+                        Eadweard Muybridge, 1878 — each photo captures one split second of the gallop
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(5, 1fr); grid-auto-rows: 1fr; gap: 6px;">
+                        <div style="text-align:center"><img src="assets/horse-frame-01.png" style="width:100%;height:auto;max-height:118px;object-fit:contain;border-radius:4px;display:block"><span style="font-size:0.38em;opacity:0.6">1</span></div>
+                        <div style="text-align:center"><img src="assets/horse-frame-02.png" style="width:100%;height:auto;max-height:118px;object-fit:contain;border-radius:4px;display:block"><span style="font-size:0.38em;opacity:0.6">2</span></div>
+                        <div style="text-align:center"><img src="assets/horse-frame-03.png" style="width:100%;height:auto;max-height:118px;object-fit:contain;border-radius:4px;display:block"><span style="font-size:0.38em;opacity:0.6">3</span></div>
+                        <div style="text-align:center"><img src="assets/horse-frame-04.png" style="width:100%;height:auto;max-height:118px;object-fit:contain;border-radius:4px;display:block"><span style="font-size:0.38em;opacity:0.6">4</span></div>
+                        <div style="text-align:center"><img src="assets/horse-frame-05.png" style="width:100%;height:auto;max-height:118px;object-fit:contain;border-radius:4px;display:block"><span style="font-size:0.38em;opacity:0.6">5</span></div>
+                        <div style="text-align:center"><img src="assets/horse-frame-06.png" style="width:100%;height:auto;max-height:118px;object-fit:contain;border-radius:4px;display:block"><span style="font-size:0.38em;opacity:0.6">6</span></div>
+                        <div style="text-align:center"><img src="assets/horse-frame-07.png" style="width:100%;height:auto;max-height:118px;object-fit:contain;border-radius:4px;display:block"><span style="font-size:0.38em;opacity:0.6">7</span></div>
+                        <div style="text-align:center"><img src="assets/horse-frame-08.png" style="width:100%;height:auto;max-height:118px;object-fit:contain;border-radius:4px;display:block"><span style="font-size:0.38em;opacity:0.6">8</span></div>
+                        <div style="text-align:center"><img src="assets/horse-frame-09.png" style="width:100%;height:auto;max-height:118px;object-fit:contain;border-radius:4px;display:block"><span style="font-size:0.38em;opacity:0.6">9</span></div>
+                        <div style="text-align:center"><img src="assets/horse-frame-10.png" style="width:100%;height:auto;max-height:118px;object-fit:contain;border-radius:4px;display:block"><span style="font-size:0.38em;opacity:0.6">10</span></div>
+                        <div style="text-align:center"><img src="assets/horse-frame-11.png" style="width:100%;height:auto;max-height:118px;object-fit:contain;border-radius:4px;display:block"><span style="font-size:0.38em;opacity:0.6">11</span></div>
+                        <div style="text-align:center"><img src="assets/horse-frame-12.png" style="width:100%;height:auto;max-height:118px;object-fit:contain;border-radius:4px;display:block"><span style="font-size:0.38em;opacity:0.6">12</span></div>
+                        <div style="text-align:center"><img src="assets/horse-frame-13.png" style="width:100%;height:auto;max-height:118px;object-fit:contain;border-radius:4px;display:block"><span style="font-size:0.38em;opacity:0.6">13</span></div>
+                        <div style="text-align:center"><img src="assets/horse-frame-14.png" style="width:100%;height:auto;max-height:118px;object-fit:contain;border-radius:4px;display:block"><span style="font-size:0.38em;opacity:0.6">14</span></div>
+                        <div style="text-align:center"><img src="assets/horse-frame-15.png" style="width:100%;height:auto;max-height:118px;object-fit:contain;border-radius:4px;display:block"><span style="font-size:0.38em;opacity:0.6">15</span></div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>You Control the Speed! 🎚️</h3>
+
+                    <!-- ── Row 1: canvas + fps counter ── -->
+                    <div style="display: flex; gap: 2rem; align-items: center; margin-top: 0.2em;">
+
+                        <div style="flex: 0 0 auto; text-align: center;">
+                            <canvas id="horseCanvas" width="300" height="200"
+                                    style="border-radius: 10px; background: #f5f0e8; box-shadow: 0 4px 16px rgba(0,0,0,0.25); display: block;">
+                            </canvas>
+                            <p id="horseFrameNum"
+                               style="font-size: 0.48em; margin-top: 0.3em; opacity: 0.65;">
+                                Frame 1 of 15
+                            </p>
+                        </div>
+
+                        <!-- fps display only, no grid here -->
+                        <div style="flex: 1; text-align: center;">
+                            <div style="display: flex; align-items: baseline; gap: 0.3em; justify-content: center;">
+                                <span style="font-size: 3.5em; font-weight: 900; color: #00D9E0;"
+                                      id="horseFpsVal">2</span>
+                                <span style="font-size: 0.8em; font-weight: bold;">fps</span>
+                            </div>
+                            <div id="horseFpsMsg"
+                                 style="font-size: 0.65em; font-style: italic; margin-top: 0.3em;">
+                                👀 You can see each individual frame!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── Row 2: film strip of all 15 frames (2 rows × 8 cols) ── -->
+                    <div id="horseStrip"
+                         style="display: grid; grid-template-columns: repeat(8, 1fr); grid-auto-rows: 65px; gap: 5px; margin-top: 0.4em;">
+                    </div>
+
+                    <!-- ── Slider ── -->
+                    <div style="margin-top: 0.8em;">
+                        <input type="range" id="horseSlider" min="1" max="24" value="2"
+                               style="width: 100%; height: 8px; accent-color: #00D9E0; cursor: pointer;">
+                        <div style="display: flex; justify-content: space-between;
+                                    font-size: 0.48em; margin-top: 0.15em; opacity: 0.65;">
+                            <span>⬅️ slow</span>
+                            <span>1 fps</span>
+                            <span>6 fps</span>
+                            <span>12 fps</span>
+                            <span>18 fps</span>
+                            <span>24 fps (movies)</span>
+                            <span>fast ➡️</span>
+                        </div>
+                    </div>
+
+
+                    <script>
+                    (function () {
+                        var canvas = document.getElementById('horseCanvas');
+                        if (!canvas || canvas.dataset.horseinit) return;
+                        canvas.dataset.horseinit = '1';
+
+                        var ctx       = canvas.getContext('2d');
+                        var slider    = document.getElementById('horseSlider');
+                        var fpsVal    = document.getElementById('horseFpsVal');
+                        var fpsMsg    = document.getElementById('horseFpsMsg');
+                        var frameNum  = document.getElementById('horseFrameNum');
+                        var strip     = document.getElementById('horseStrip');
+
+                        var TOTAL     = 15;
+                        var imgs      = new Array(TOTAL);
+                        var thumbEls  = [];
+                        var loaded    = 0;
+                        var current   = 0;
+                        var timer     = null;
+
+                        /* Load frames + build thumbnail strip */
+                        for (var i = 0; i < TOTAL; i++) {
+                            (function (idx) {
+                                var img = new Image();
+                                img.src = 'assets/horse-frame-' + String(idx + 1).padStart(2, '0') + '.png';
+                                img.onload = function () {
+                                    imgs[idx] = img;
+                                    loaded++;
+                                    if (idx === 0) drawFrame(0);
+                                    if (loaded === TOTAL) start();
+                                };
+                                imgs[idx] = img; /* placeholder so array slot exists */
+
+                                /* thumbnail — fills grid cell */
+                                var th = document.createElement('img');
+                                th.src = img.src;
+                                th.title = 'Frame ' + (idx + 1);
+                                th.style.cssText =
+                                    'width:100%;height:65px;display:block;' +
+                                    'border-radius:4px;cursor:pointer;' +
+                                    'border:3px solid transparent;' +
+                                    'transition:border-color 0.12s;object-fit:cover;';
+                                th.addEventListener('click', (function (n) {
+                                    return function () { current = n; drawFrame(n); };
+                                })(idx));
+                                strip.appendChild(th);
+                                thumbEls.push(th);
+                            })(i);
+                        }
+
+                        function drawFrame(i) {
+                            if (!imgs[i] || !imgs[i].complete || !imgs[i].naturalWidth) return;
+                            ctx.clearRect(0, 0, canvas.width, canvas.height);
+                            ctx.drawImage(imgs[i], 0, 0, canvas.width, canvas.height);
+                            frameNum.textContent = 'Frame ' + (i + 1) + ' of ' + TOTAL;
+                            thumbEls.forEach(function (t, j) {
+                                t.style.borderColor = (j === i) ? '#00D9E0' : 'transparent';
+                            });
+                        }
+
+                        function messages(fps) {
+                            if (fps <= 2)  return '👀 You can see each individual frame!';
+                            if (fps <= 5)  return '🤔 Something is moving…';
+                            if (fps <= 10) return '😮 It\'s coming alive!';
+                            if (fps <= 18) return '🏇 It\'s galloping!';
+                            return '🔥 Smooth — just like a real movie!';
+                        }
+
+                        function start() {
+                            stop();
+                            var fps   = parseInt(slider.value, 10);
+                            var delay = 1000 / fps;
+                            (function tick() {
+                                drawFrame(current);
+                                current = (current + 1) % TOTAL;
+                                timer = setTimeout(tick, delay);
+                            })();
+                        }
+
+                        function stop() {
+                            if (timer) { clearTimeout(timer); timer = null; }
+                        }
+
+                        slider.addEventListener('input', function () {
+                            var fps = parseInt(slider.value, 10);
+                            fpsVal.textContent = fps;
+                            fpsMsg.textContent = messages(fps);
+                            start();
+                        });
+
+                        /* Reveal.js: pause when slide is hidden */
+                        var mySection = canvas.parentElement;
+                        while (mySection && mySection.tagName !== 'SECTION') {
+                            mySection = mySection.parentElement;
+                        }
+                        if (window.Reveal) {
+                            Reveal.on('slidechanged', function (e) {
+                                if (e.currentSlide === mySection) start();
+                                else stop();
+                            });
+                            Reveal.on('ready', function (e) {
+                                if (e.currentSlide === mySection) start();
+                            });
+                        }
+
+                        /* Fallback: start once first frame is ready */
+                        var poll = setInterval(function () {
+                            if (loaded >= 1) { clearInterval(poll); start(); }
+                        }, 100);
+                    })();
+                    </script>
+                </section>
+
+            </section>
+
+            <!-- Game 3: Pixel Art Animator ⭐ -->
+            <section>
+                <section>
+                    <h2>Game 3: Pixel Art Animator ⭐</h2>
+                    <p class="big-emoji">🎨</p>
+                    <p style="font-size: 0.8em;">This is YOUR moment as a Pixel Artist!</p>
+                    <p style="font-size: 0.7em; margin-top: 2em; opacity: 0.7;">Press ↓ to learn more</p>
+                </section>
+
+                <section>
+                    <h3>Be an Animator!</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>🖼️ Design Frame 1 - Your starting image</li>
+                        <li>🖼️ Design Frame 2 - Slightly different</li>
+                        <li>🖼️ Design Frame 3 - Keep changing it</li>
+                        <li>🔄 Loop them together = Animation!</li>
+                    </ul>
+                    <p style="font-size: 0.7em; margin-top: 1em; font-style: italic;">You're creating a mini movie — from scratch!</p>
+                </section>
+
+                <section>
+                    <h3>Animation Ideas 💡</h3>
+                    <p style="font-size: 0.6em; margin-bottom: 0.5em;">Click any idea to open it in MakeCode and try it!</p>
+                    <div style="font-size: 0.72em; line-height: 2; text-align: left;">
+                        <ul style="list-style: none; padding: 0;">
+                            <li><a href="https://makecode.microbit.org/_Wuqaa71wDDyv" target="_blank" style="color: #00D9E0; text-decoration: none;">⭐ A twinkling star</a></li>
+                            <li><a href="https://makecode.microbit.org/_1rDcd2DPkXR5" target="_blank" style="color: #00D9E0; text-decoration: none;">🚀 A rocket launching</a></li>
+                            <li><a href="https://makecode.microbit.org/_dfeUAeVK0KKU" target="_blank" style="color: #00D9E0; text-decoration: none;">🐱 A cat blinking</a></li>
+                            <li><a href="https://makecode.microbit.org/_emXfLJYWw6Ww" target="_blank" style="color: #00D9E0; text-decoration: none;">🌊 Ocean waves</a></li>
+                            <li><a href="https://makecode.microbit.org/_JL15veA6k83m" target="_blank" style="color: #00D9E0; text-decoration: none;">👾 A jumping alien</a></li>
+                            <li><a href="https://makecode.microbit.org/_TuTAv1EmA62y" target="_blank" style="color: #00D9E0; text-decoration: none;">❤️ A beating heart</a></li>
+                        </ul>
+                        <p style="margin-top: 0.5em; color: #00D9E0;"><strong>What will YOU animate?</strong></p>
+                    </div>
+                </section>
+
+               </section>
+
+                <section>
+                    <h3>MakeCode Blocks 🧱</h3>
+                    <div style="text-align: center; margin-top: 0.5em;">
+                        <img src="assets/pixel-animator-blocks.png" alt="Pixel Animator Blocks" style="max-width: 90%; max-height: 520px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <p style="font-size: 0.5em; margin-top: 0.3em; font-style: italic; opacity: 0.8;">The blocks code</p>
+                    </div>
+
+                    <aside class="notes">
+                        <pre><code>input.onButtonPressed(Button.A, function () {
+    // Play animation 3 times
+    for (let i = 0; i < 3; i++) {
+        basic.showLeds(`
+            . . . . .
+            . . # . .
+            . # # # .
+            . . # . .
+            . . . . .
+        `)
+        basic.pause(200)
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # # # # #
+            . # # # .
+            . . # . .
+        `)
+        basic.pause(200)
+        basic.showLeds(`
+            . # # # .
+            # # # # #
+            # # # # #
+            # # # # #
+            . # # # .
+        `)
+        basic.pause(200)
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # # # # #
+            . # # # .
+            . . # . .
+        `)
+        basic.pause(200)
+    }
+    basic.clearScreen()
+})</code></pre>
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>See It In Action! 🎮</h3>
+                    <div style="text-align: center; margin-top: 0.5em;">
+                        <img src="assets/pixel-animator-sim.gif" alt="Pixel Animator Running" style="max-width: 70%; max-height: 480px; border-radius: 8px; border: 3px solid #00D9E0;">
+                        <p style="font-size: 0.5em; margin-top: 0.3em; font-style: italic; opacity: 0.8;">Live on the micro:bit!</p>
+                    </div>
+                    <p style="font-size: 0.6em; margin-top: 0.5em; font-style: italic;">Press Button A to play your animation!</p>
+                </section>
+            </section>
+
+            <!-- Game 4: Dancing Stick Figure -->
+            <section>
+                <section>
+                    <h2>Game 4: Dancing Stick Figure 🕺</h2>
+                    <p class="big-emoji">🕺</p>
+                    <p style="font-size: 0.8em;">Make your character dance!</p>
+                    <p style="font-size: 0.7em; margin-top: 2em; opacity: 0.7;">Press ↓ to learn more</p>
+                </section>
+
+                <section>
+                    <h3>Dance Party!</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>🧍 Create a stick figure using LEDs</li>
+                        <li>💃 Design different dance poses</li>
+                        <li>🔄 Switch between poses to animate dancing</li>
+                        <li>🎵 Add music to match the moves!</li>
+                    </ul>
+                    <p style="font-size: 0.7em; margin-top: 1em; font-style: italic;">Button A = Dance Move 1 | Button B = Dance Move 2 | Shake = Random Dance!</p>
+                </section>
+
+                <section>
+                    <h3>What you'll learn:</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>🎨 Designing custom LED patterns</li>
+                        <li>🎞️ Frame-by-frame animation</li>
+                        <li>🔘 Multiple button inputs</li>
+                        <li>🎵 Combining visuals with sound</li>
+                    </ul>
+                    <div class="concept-box" style="font-size: 0.7em; margin-top: 1em;">
+                        <strong>Animation Tip:</strong> Small changes between frames = smooth movement!
+                    </div>
+                </section>
+
+                <section>
+                    <h3>MakeCode Blocks 🧱</h3>
+                    <div style="text-align: center; margin-top: 0.5em;">
+                        <img src="assets/dancing-figure-blocks.png" alt="Dancing Figure Blocks" style="max-width: 90%; max-height: 520px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <p style="font-size: 0.5em; margin-top: 0.3em; font-style: italic; opacity: 0.8;">The blocks code</p>
+                    </div>
+
+                    <aside class="notes">
+                        <pre><code>// Dance pose 1 - Arms up
+function pose1() {
+    basic.showLeds(`
+        # . # . #
+        . # # # .
+        . . # . .
+        . # . # .
+        . # . # .
+    `)
+}
+
+// Dance pose 2 - Arms down
+function pose2() {
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        # . # . #
+        . # . # .
+        . # . # .
+    `)
+}
+
+// Dance pose 3 - Lean right
+function pose3() {
+    basic.showLeds(`
+        . . # . .
+        . . # # #
+        . # # . .
+        . # . # .
+        # . . . #
+    `)
+}
+
+input.onButtonPressed(Button.A, function () {
+    pose1()
+    music.playTone(262, 200)
+})
+
+input.onButtonPressed(Button.B, function () {
+    pose2()
+    music.playTone(330, 200)
+})
+
+input.onGesture(Gesture.Shake, function () {
+    for (let i = 0; i < 4; i++) {
+        pose1()
+        music.playTone(262, 150)
+        basic.pause(200)
+        pose2()
+        music.playTone(330, 150)
+        basic.pause(200)
+        pose3()
+        music.playTone(392, 150)
+        basic.pause(200)
+    }
+})</code></pre>
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>See It In Action! 🎮</h3>
+                    <div style="text-align: center; margin-top: 0.5em;">
+                        <img src="assets/dancing-figure-sim.gif" alt="Dancing Figure Running" style="max-width: 70%; max-height: 480px; border-radius: 8px; border: 3px solid #00D9E0;">
+                        <p style="font-size: 0.5em; margin-top: 0.3em; font-style: italic; opacity: 0.8;">Live on the micro:bit!</p>
+                    </div>
+                    <p style="font-size: 0.6em; margin-top: 0.5em; font-style: italic;">Create your own dance moves!</p>
+                </section>
+            </section>
+
+            <!-- Game 5: Guess the Animal -->
+            <section>
+                <section>
+                    <h2>Game 5: Guess the Animal! 🐾❓</h2>
+                    <p class="big-emoji">🐾❓</p>
+                    <p style="font-size: 0.8em;">Can you guess what animal is on screen?</p>
+                    <p style="font-size: 0.7em; margin-top: 2em; opacity: 0.7;">Press ↓ to learn more</p>
+                </section>
+
+                <section>
+                    <h3>How to Play</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>🎲 Shake to see a mystery animal animation!</li>
+                        <li>🤔 Can you guess what animal it is?</li>
+                        <li>🔘 Press Button A to reveal the answer!</li>
+                        <li>🔄 Shake again for a new animal!</li>
+                    </ul>
+                    <p style="font-size: 0.7em; margin-top: 1em; font-style: italic;">Who can guess the most animals correctly?</p>
+                </section>
+
+                <section>
+                    <h3>Starter Animals 💡</h3>
+                    <p style="font-size: 0.65em; margin-bottom: 0.5em;">Try one of these — or invent your own!</p>
+                    <div style="display: flex; justify-content: space-around; font-size: 0.55em; gap: 0.5em;">
+                        <div style="text-align: center;">
+                            <p><strong>🦆 Duck</strong></p>
+                            <pre style="background: #f0f0f0; padding: 0.5em; border-radius: 4px; line-height: 1.7;">
+. # # . .
+# # # # .
+. # # # #
+. # # # .
+. . . . .
+                            </pre>
+                            <p style="opacity: 0.7;">bobs up &amp; down</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <p><strong>🐰 Rabbit</strong></p>
+                            <pre style="background: #f0f0f0; padding: 0.5em; border-radius: 4px; line-height: 1.7;">
+# . . . #
+# . . . #
+. # # # .
+. # # # .
+. . # . .
+                            </pre>
+                            <p style="opacity: 0.7;">ears wiggle</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <p><strong>🐟 Fish</strong></p>
+                            <pre style="background: #f0f0f0; padding: 0.5em; border-radius: 4px; line-height: 1.7;">
+. . # . .
+. # # # #
+# # # # #
+. # # # #
+. . # . .
+                            </pre>
+                            <p style="opacity: 0.7;">swims sideways</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <p><strong>🦋 Butterfly</strong></p>
+                            <pre style="background: #f0f0f0; padding: 0.5em; border-radius: 4px; line-height: 1.7;">
+# . . . #
+# # . # #
+. . # . .
+# # . # #
+# . . . #
+                            </pre>
+                            <p style="opacity: 0.7;">wings flap</p>
+                        </div>
+                    </div>
+                </section>
+
+               </section>
+
+                <section>
+                    <h3>What you'll learn:</h3>
+                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
+                        <li>🎤 Using the microphone / sound sensor</li>
+                        <li>🔀 Multiple if/else conditions</li>
+                        <li>😊 Displaying different animated faces</li>
+                        <li>🔄 Continuous checking with "forever" loop</li>
+                    </ul>
+                    <div class="concept-box" style="font-size: 0.7em; margin-top: 1em;">
+                        <strong>Programming Concept:</strong> Sensors let your code react to the real world!
+                    </div>
+                </section>
+
+                <section>
+                    <h3>The Challenge! 🎤</h3>
+                    <div style="font-size: 0.75em; line-height: 1.8;">
+                        <p><strong>Experiment Time:</strong></p>
+                        <ul style="text-align: left;">
+                            <li>1️⃣ Stay perfectly quiet — watch your pet sleep peacefully!</li>
+                            <li>2️⃣ Talk normally — your pet looks surprised!</li>
+                            <li>3️⃣ Shout or clap loudly — your pet gets sad!</li>
+                        </ul>
+                        <p style="margin-top: 1em; color: #00D9E0;"><strong>Can the whole class keep the pet happy for 10 seconds?</strong></p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>MakeCode Blocks 🧱</h3>
+                    <div style="text-align: center; margin-top: 0.5em;">
+                        <img src="assets/animated-pet-blocks.png" alt="Animated Pet Blocks" style="max-width: 90%; max-height: 520px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <p style="font-size: 0.5em; margin-top: 0.3em; font-style: italic; opacity: 0.8;">The blocks code</p>
+                    </div>
+
+                    <aside class="notes">
+                        <pre><code>basic.forever(function () {
+    let noise = input.soundLevel()
+    if (noise > 150) {
+        basic.showIcon(IconNames.Sad)
+    } else if (noise > 60) {
+        basic.showIcon(IconNames.Surprised)
+    } else {
+        basic.showIcon(IconNames.Asleep)
+    }
+    basic.pause(200)
+})</code></pre>
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>See It In Action! 🎮</h3>
+                    <div style="text-align: center; margin-top: 0.5em;">
+                        <img src="assets/animated-pet-sim.gif" alt="Animated Pet Running" style="max-width: 70%; max-height: 480px; border-radius: 8px; border: 3px solid #00D9E0;">
+                        <p style="font-size: 0.5em; margin-top: 0.3em; font-style: italic; opacity: 0.8;">Live on the micro:bit!</p>
+                    </div>
+                    <p style="font-size: 0.6em; margin-top: 0.5em; font-style: italic;">Your pet reacts to noise in real-time!</p>
+                </section>
+            </section>
+
+            <!-- Conclusion -->
+            <section>
+                <h2>You're Pixel Artists Now! 🎨</h2>
+                <div style="font-size: 0.72em; margin-top: 0.8em;">
+                    <p style="margin-bottom: 0.8em;">Today you built <strong>5 amazing projects</strong> on your micro:bit:</p>
+                    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5em; text-align: center; margin: 1em 0; font-size: 0.85em;">
+                        <div style="background: rgba(0,217,224,0.1); border-radius: 8px; padding: 0.5em;">🐾<br><strong>Animated Pet</strong></div>
+                        <div style="background: rgba(0,217,224,0.1); border-radius: 8px; padding: 0.5em;">🎆<br><strong>Fireworks</strong></div>
+                        <div style="background: rgba(0,217,224,0.1); border-radius: 8px; padding: 0.5em;">🎨<br><strong>Pixel Animator</strong></div>
+                        <div style="background: rgba(0,217,224,0.1); border-radius: 8px; padding: 0.5em;">🕺<br><strong>Dancing Figure</strong></div>
+                        <div style="background: rgba(0,217,224,0.1); border-radius: 8px; padding: 0.5em;">🐾<br><strong>Guess the Animal</strong></div>
+                    </div>
+                    <p style="margin-top: 1em;">Keep creating at <a href="https://makecode.microbit.org" target="_blank" style="color: #00D9E0; font-weight: bold;">makecode.microbit.org</a></p>
+                </div>
+                <p style="margin-top: 1.2em; font-size: 1em; color: #00D9E0;"><strong>Thank you for being amazing! 🙏</strong></p>
+                <p class="big-emoji" style="margin-top: 0.3em;">👏</p>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Reveal.js JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/plugin/notes/notes.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            backgroundTransition: 'fade',
+            width: 1280,
+            height: 720,
+            margin: 0,
+            center: true,
+            controls: true,
+            progress: true,
+            slideNumber: true,
+            plugins: [RevealNotes]
+        });
+    </script>
+</body>
+</html>
