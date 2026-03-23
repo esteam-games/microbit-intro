@@ -496,7 +496,7 @@
                         <ul style="list-style: none; padding: 0;">
                             <li><a href="https://makecode.microbit.org/_Wuqaa71wDDyv" target="_blank" style="color: #00D9E0; text-decoration: none;">⭐ A twinkling star</a></li>
                             <li><a href="https://makecode.microbit.org/_1rDcd2DPkXR5" target="_blank" style="color: #00D9E0; text-decoration: none;">🚀 A rocket launching</a></li>
-                            <li><a href="https://makecode.microbit.org/_dfeUAeVK0KKU" target="_blank" style="color: #00D9E0; text-decoration: none;">🐱 A cat blinking</a></li>
+                            <li><a href="https://makecode.microbit.org/_3uhW0o3VVfwb" target="_blank" style="color: #00D9E0; text-decoration: none;">🐱 A cat blinking</a></li>
                             <li><a href="https://makecode.microbit.org/_emXfLJYWw6Ww" target="_blank" style="color: #00D9E0; text-decoration: none;">🌊 Ocean waves</a></li>
                             <li><a href="https://makecode.microbit.org/_JL15veA6k83m" target="_blank" style="color: #00D9E0; text-decoration: none;">👾 A jumping alien</a></li>
                             <li><a href="https://makecode.microbit.org/_TuTAv1EmA62y" target="_blank" style="color: #00D9E0; text-decoration: none;">❤️ A beating heart</a></li>
@@ -504,8 +504,6 @@
                         <p style="margin-top: 0.5em; color: #00D9E0;"><strong>What will YOU animate?</strong></p>
                     </div>
                 </section>
-
-               </section>
 
                 <section>
                     <h3>MakeCode Blocks 🧱</h3>
@@ -747,63 +745,21 @@ input.onGesture(Gesture.Shake, function () {
                     </div>
                 </section>
 
-               </section>
-
-                <section>
-                    <h3>What you'll learn:</h3>
-                    <ul style="font-size: 0.75em; line-height: 1.8; text-align: left;">
-                        <li>🎤 Using the microphone / sound sensor</li>
-                        <li>🔀 Multiple if/else conditions</li>
-                        <li>😊 Displaying different animated faces</li>
-                        <li>🔄 Continuous checking with "forever" loop</li>
-                    </ul>
-                    <div class="concept-box" style="font-size: 0.7em; margin-top: 1em;">
-                        <strong>Programming Concept:</strong> Sensors let your code react to the real world!
-                    </div>
-                </section>
-
-                <section>
-                    <h3>The Challenge! 🎤</h3>
-                    <div style="font-size: 0.75em; line-height: 1.8;">
-                        <p><strong>Experiment Time:</strong></p>
-                        <ul style="text-align: left;">
-                            <li>1️⃣ Stay perfectly quiet — watch your pet sleep peacefully!</li>
-                            <li>2️⃣ Talk normally — your pet looks surprised!</li>
-                            <li>3️⃣ Shout or clap loudly — your pet gets sad!</li>
-                        </ul>
-                        <p style="margin-top: 1em; color: #00D9E0;"><strong>Can the whole class keep the pet happy for 10 seconds?</strong></p>
-                    </div>
-                </section>
-
                 <section>
                     <h3>MakeCode Blocks 🧱</h3>
                     <div style="text-align: center; margin-top: 0.5em;">
-                        <img src="assets/animated-pet-blocks.png" alt="Animated Pet Blocks" style="max-width: 90%; max-height: 520px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <img src="assets/guess-animal-blocks.png" alt="Guess the Animal Blocks" style="max-width: 90%; max-height: 520px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
                         <p style="font-size: 0.5em; margin-top: 0.3em; font-style: italic; opacity: 0.8;">The blocks code</p>
                     </div>
-
-                    <aside class="notes">
-                        <pre><code>basic.forever(function () {
-    let noise = input.soundLevel()
-    if (noise > 150) {
-        basic.showIcon(IconNames.Sad)
-    } else if (noise > 60) {
-        basic.showIcon(IconNames.Surprised)
-    } else {
-        basic.showIcon(IconNames.Asleep)
-    }
-    basic.pause(200)
-})</code></pre>
-                    </aside>
                 </section>
 
                 <section>
                     <h3>See It In Action! 🎮</h3>
                     <div style="text-align: center; margin-top: 0.5em;">
-                        <img src="assets/animated-pet-sim.gif" alt="Animated Pet Running" style="max-width: 70%; max-height: 480px; border-radius: 8px; border: 3px solid #00D9E0;">
+                        <img src="assets/guess-animal-sim.gif" alt="Guess the Animal Running" style="max-width: 70%; max-height: 480px; border-radius: 8px; border: 3px solid #00D9E0;">
                         <p style="font-size: 0.5em; margin-top: 0.3em; font-style: italic; opacity: 0.8;">Live on the micro:bit!</p>
                     </div>
-                    <p style="font-size: 0.6em; margin-top: 0.5em; font-style: italic;">Your pet reacts to noise in real-time!</p>
+                    <p style="font-size: 0.6em; margin-top: 0.5em; font-style: italic;">Can you guess the animal?</p>
                 </section>
             </section>
 
