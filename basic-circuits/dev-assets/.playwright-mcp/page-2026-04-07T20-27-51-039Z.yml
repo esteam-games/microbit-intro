@@ -1,0 +1,60 @@
+- application [ref=e2]:
+  - generic:
+    - generic:
+      - heading [level=1]: micro:bit Pixel Art Animations!
+      - paragraph: 🎨 ✨ 🎬
+      - paragraph: "Session 2: Become a Pixel Artist!"
+    - generic:
+      - generic:
+        - heading [level=2]: Welcome Back! 🎉
+        - paragraph: 👋
+        - paragraph: Remember what we learned last time?
+        - paragraph: Press ↓ for a quick recap
+      - generic [ref=e3]:
+        - heading "Session 1 Recap" [level=3] [ref=e4]
+        - list [ref=e5]:
+          - listitem [ref=e6]: 💗 Blinking Heart - Our first animation!
+          - listitem [ref=e7]: 🪙 Coin Flipper - Touch sensor magic
+          - listitem [ref=e8]: 🎱 Magic 8 Ball - Shake for answers
+          - listitem [ref=e9]: 👏 Clap the Loudest - Microphone fun
+          - listitem [ref=e10]: ⚖️ Steady Hand - Tilt sensor challenge
+          - listitem [ref=e11]: 🎲 Board Game Dice - Button controls
+        - paragraph [ref=e12]:
+          - strong [ref=e13]: "Today: We become Pixel Artists!"
+    - generic:
+      - generic:
+        - heading [level=2]: "Game 1: Animated Pet 🐾"
+        - paragraph: 🐾
+        - paragraph: Your micro:bit pet listens to sound!
+        - paragraph: Press ↓ to learn more
+      - generic:
+        - heading [level=3]: Meet Your Digital Pet!
+        - list:
+          - listitem:
+            - text: 🔇
+            - strong: Quiet room
+            - text: = Asleep (it's peaceful!)
+          - listitem:
+            - text: 😲
+            - strong: Medium noise
+            - text: = Surprised (what's that sound?)
+          - listitem:
+            - text: 😢
+            - strong: Very loud
+            - text: = Sad (too noisy!)
+          - listitem: Your pet reacts to the sounds around it!
+        - paragraph: Can you keep your pet happy by staying quiet?
+    - generic:
+      - generic:
+        - heading [level=2]: "Game 2: Fireworks Display 🎆"
+        - paragraph: 🎆
+        - paragraph: Create explosive light shows!
+        - paragraph: Press ↓ to learn more
+  - link "2 . 2" [ref=e24] [cursor=pointer]:
+    - /url: "#/1/1"
+  - complementary:
+    - button "previous slide" [ref=e25] [cursor=pointer]
+    - button "next slide" [ref=e27] [cursor=pointer]
+    - button "above slide" [ref=e29] [cursor=pointer]
+  - text: Speaker notes
+  - generic [ref=e33]: "Session 1 Recap 💗 Blinking Heart - Our first animation! 🪙 Coin Flipper - Touch sensor magic 🎱 Magic 8 Ball - Shake for answers 👏 Clap the Loudest - Microphone fun ⚖️ Steady Hand - Tilt sensor challenge 🎲 Board Game Dice - Button controls Today: We become Pixel Artists!"

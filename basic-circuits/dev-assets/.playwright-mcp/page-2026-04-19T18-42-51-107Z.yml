@@ -1,0 +1,35 @@
+- application [ref=e2]:
+  - generic:
+    - generic [ref=e3]:
+      - heading "Design Circuits that Light Up!" [level=1] [ref=e4]
+      - paragraph [ref=e5]: 🔋 💡 🎨
+      - paragraph [ref=e6]: Let's become Paper Engineers!
+    - generic:
+      - generic:
+        - heading [level=2]: Batteries are Everywhere!
+        - paragraph: 🔋 🔦 🎮
+        - paragraph: Before we build, we need to find our power!
+      - generic:
+        - heading [level=3]: The AA Battery
+        - generic:
+          - img
+          - list:
+            - listitem:
+              - text: +
+              - strong: "The \"Bump\":"
+              - text: The raised end is Positive.
+            - listitem:
+              - text: "-"
+              - strong: "The Flat:"
+              - text: The smooth, flat end is Negative.
+    - generic:
+      - generic:
+        - heading [level=2]: What is a Paper Circuit?
+        - paragraph: 📄 ✨
+        - paragraph: It's like drawing, but with electricity!
+  - link "1" [ref=e15] [cursor=pointer]:
+    - /url: "#/"
+  - complementary:
+    - button "next slide" [ref=e16] [cursor=pointer]
+  - text: Speaker notes
+  - generic [ref=e19]: Design Circuits that Light Up! 🔋 💡 🎨 Let's become Paper Engineers!

@@ -4,7 +4,8 @@ An interactive Reveal.js-based presentation to introduce micro:bit to kids aged 
 
 ## 🌐 View Online
 
-Visit the live presentation: **https://esteam-games.github.io/microbit-intro/**
+- **Meet the micro:bit!**: [https://esteam-games.github.io/microbit-intro/](https://esteam-games.github.io/microbit-intro/)
+- **Basic Circuits**: [https://esteam-games.github.io/microbit-intro/basic-circuits/](https://esteam-games.github.io/microbit-intro/basic-circuits/)
 
 ## 📚 Content Overview
 
@@ -111,4 +112,3 @@ Change the theme by modifying this line in `index.html`:
 
 ## 📝 License
 
-This presentation is created for educational purposes.
