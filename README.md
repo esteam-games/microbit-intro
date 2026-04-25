@@ -6,6 +6,7 @@ An interactive Reveal.js-based presentation to introduce micro:bit to kids aged 
 
 - **Meet the micro:bit!**: [https://esteam-games.github.io/do-n-learn/](https://esteam-games.github.io/do-n-learn/)
 - **Basic Circuits**: [https://esteam-games.github.io/do-n-learn/basic-circuits/](https://esteam-games.github.io/do-n-learn/basic-circuits/)
+- **Pixel Art Animations (Session 2)**: [https://esteam-games.github.io/do-n-learn/session-2/](https://esteam-games.github.io/do-n-learn/session-2/)
 
 ## 📚 Content Overview
 
