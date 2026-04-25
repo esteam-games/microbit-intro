@@ -587,19 +587,21 @@
             plugins: [RevealNotes]
         }).then(() => {
             // Fix electron color consistency
-            const electron = document.getElementById('traveling-electron');
-            if (electron) {
-                const colors = ['#00D9E0', '#ff4d4d', '#4d79ff', '#ffff00', '#ff00ff', '#00ff00'];
+            const electrons = document.querySelectorAll('.electron');
+            const colors = ['#00D9E0', '#ff4d4d', '#4d79ff', '#ffff00', '#ff00ff', '#00ff00'];
+            
+            electrons.forEach(electron => {
                 electron.addEventListener('animationiteration', () => {
                     const randomColor = colors[Math.floor(Math.random() * colors.length)];
-                    electron.style.boxShadow = `0 0 15px ${randomColor}`;
-                    electron.style.color = randomColor;
+                    electron.style.boxShadow = '0 0 15px ' + randomColor;
+                    electron.style.background = randomColor;
+                    electron.style.color = '#fff';
                 });
                 // Set initial color
                 const initialColor = colors[0];
-                electron.style.boxShadow = `0 0 15px ${initialColor}`;
-                electron.style.color = initialColor;
-            }
+                electron.style.boxShadow = '0 0 15px ' + initialColor;
+                electron.style.background = initialColor;
+            });
         });
     </script>
 </body>
