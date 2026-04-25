@@ -4,8 +4,8 @@ An interactive Reveal.js-based presentation to introduce micro:bit to kids aged 
 
 ## 🌐 View Online
 
-- **Meet the micro:bit!**: [https://esteam-games.github.io/microbit-intro/](https://esteam-games.github.io/microbit-intro/)
-- **Basic Circuits**: [https://esteam-games.github.io/microbit-intro/basic-circuits/](https://esteam-games.github.io/microbit-intro/basic-circuits/)
+- **Meet the micro:bit!**: [https://esteam-games.github.io/do-n-learn/](https://esteam-games.github.io/do-n-learn/)
+- **Basic Circuits**: [https://esteam-games.github.io/do-n-learn/basic-circuits/](https://esteam-games.github.io/do-n-learn/basic-circuits/)
 
 ## 📚 Content Overview
 
@@ -36,7 +36,7 @@ The presentation includes:
 2. **Wait for deployment**:
    - GitHub will automatically build and deploy
    - Check the Actions tab for deployment status
-   - Once complete, visit: `https://esteam-games.github.io/microbit-intro/`
+   - Once complete, visit: `https://esteam-games.github.io/do-n-learn/`
 
 ### Making Updates
 
