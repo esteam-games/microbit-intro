@@ -195,7 +195,56 @@
                 box-shadow: inset 0 0 10px #222;
             }
         }
+
+        /* Hand-drawn Blueprint Styles */
+        .blueprint-container {
+            background: #fff;
+            border: 2px solid #333;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+            margin: 10px auto;
+            max-width: 900px;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+        }
+
+        .blueprint-svg {
+            filter: url(#wobble);
+        }
+
+        .blueprint-label {
+            font-size: 18px;
+            fill: #333;
+            font-weight: bold;
+        }
+
+        .blueprint-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+            text-align: left;
+            font-size: 0.6em;
+            margin-top: 1em;
+        }
+
+        .info-box {
+            padding: 10px;
+            border-radius: 8px;
+            border: 2px dashed #333;
+        }
+
+        .science-snippet { background: #e0f7fa; }
+        .pro-tip { background: #fff9c4; }
+        .troubleshooting { background: #ffebee; }
     </style>
+
+    <!-- Hand-drawn SVG Filter -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="wobble">
+            <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+        </filter>
+    </svg>
 </head>
 
 <body>
@@ -227,8 +276,8 @@
                             <p>Negative</p>
                         </div>
                     </div>
-                    <p style="margin-top: 1em; font-size: 0.8em;">In our circuit, the battery pushes tiny energy friends
-                        called <strong>Electrons</strong> from the negative terminal (-) to the positive terminal (+)</p>
+                    <p style="margin-top: 1em; font-size: 0.8em;">The battery holds tiny energy friends
+                        called <strong>Electrons</strong> from the negative terminal (-) ready to push to the positive terminal (+)</p>
                 </section>
             </section>
 
@@ -283,16 +332,9 @@
                 </section>
                 <section>
                     <div class="concept-box">
-                        <p>A circuit is a <strong>continuous path</strong> that allows electricity to flow from a source
-                        of high potential energy (+) to an area of low potential energy (-).</p>
+                        <p>A circuit is a <strong>continuous loop</strong> that allows <strong>electrons</strong> to flow from the <strong>negative (-)</strong> terminal of the battery to the <strong>positive (+)</strong> terminal, passing through a device like an LED to light it up.</p>
                         
-                        <p style="margin-top: 1em;">The word <strong>“circuit”</strong> comes from the same word as <strong>circle</strong>. You’ll notice that
-                        it starts and ends at the same place.</p>
-                        
-                        <p style="margin-top: 1em;">A circuit provides a path for
-                        electricity to flow from one side of a battery to the other through a
-                        device called a <strong>“load”</strong> (like our LED) that converts electrical energy to something useful
-                        like light.</p>
+                        <p style="margin-top: 1em;">The word <strong>“circuit”</strong> comes from the same word as <strong>circle</strong>. You’ll notice that it starts and ends at the same place.</p>
                     </div>
                 </section>
             </section>
@@ -451,113 +493,77 @@
             </section>
 
             <!-- 6. Takeaways -->
-            <section>
-                <h2>What did we learn? 🎓</h2>
-                <ul style="line-height: 1.8; font-size: 0.9em;">
-                    <li>🏃 Electrons flow from <span class="highlight">Negative to Positive</span>.</li>
-                    <li>⭕ Electrons travel in a <span class="highlight">loop</span> to turn on the light.</li>
-                    <li>🧭 LEDs need the <span class="highlight">right direction</span> to glow.</li>
-                    <li>🛣️ <span class="highlight">Parallel circuits</span> keep our lights bright!</li>
-                </ul>
-            </section>
-
-            <!-- Safety Warning -->
-            <section>
-                <h2>Safety First! 🛑</h2>
-                <p class="big-emoji" style="font-size: 60px;">🔥 🔋</p>
-                <div class="concept-box" style="border-left-color: #ff4d4d; background: rgba(255, 77, 77, 0.1);">
-                    <strong>Never make a road that goes straight from Plus (+) to Minus (-) without a light
-                        bulb!</strong>
-                    <br><br>
-                    This is called a <strong>Short Circuit</strong> and it will make your battery and tape get very hot!
-                    Always make sure the energy has an LED to pass through.
-                </div>
-            </section>
-
             <!-- 7. Let's Build! -->
             <section>
                 <section>
                     <h2>Let's Build! 🎨 🛠️</h2>
-                    <p class="big-emoji">🚀</p>
+                    <p class='big-emoji'>🚀</p>
                     <p>Combine your art with technology.</p>
                 </section>
                 <section>
                     <h3>Your Mission:</h3>
-                    <ol style="line-height: 1.8; text-align: left; margin-left: 2em;">
+                    <ol style='line-height: 1.8; text-align: left; margin-left: 2em;'>
                         <li>🎨 Draw something amazing (a robot? a star? a cat?).</li>
-                        <li>📌 Poke holes where you want the "eyes" or "stars" to glow.</li>
+                        <li>📌 Poke holes where you want the 'eyes' or 'stars' to glow.</li>
                         <li>🎞️ Lay your copper tape roads.</li>
                         <li>🔋 Add your battery power!</li>
                         <li>💡 Watch your art come to life!</li>
                     </ol>
-                    <p style="margin-top: 1em; font-weight: bold; color: #00D9E0;">Ready? Set? GLOW! ✨</p>
+                    <p style='margin-top: 1em; font-weight: bold; color: #00D9E0;'>Ready? Set? GLOW! ✨</p>
                 </section>
             </section>
 
-            <!-- 8. Inspiration -->
+            <!-- Inspiration Section -->
             <section>
-                <h2>Paper Circuit Inspiration 🌟</h2>
-                <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap;">
-                    <div class="concept-box"
-                        style="width: 300px; text-align: center; border-left: none; border-top: 6px solid #ff4d4d; border-radius: 12px; padding: 2em 1em;">
-                        <svg width="200" height="150" viewBox="0 0 200 150"
-                            style="background: #2a2a35; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); width: 100%;">
-                            <circle cx="40" cy="30" r="2" fill="#fff" />
-                            <circle cx="160" cy="50" r="1.5" fill="#fff" />
-                            <circle cx="120" cy="20" r="2.5" fill="#fff" />
-                            <path d="M 80 100 L 100 40 L 120 100 Z" fill="#ccc" />
-                            <circle cx="100" cy="75" r="8" fill="#4d79ff" />
-                            <path d="M 80 100 L 70 120 L 90 100 Z" fill="#ff4d4d" />
-                            <path d="M 120 100 L 130 120 L 110 100 Z" fill="#ff4d4d" />
-                            <circle cx="100" cy="110" r="12" fill="#ffaa00" />
-                            <circle cx="100" cy="110" r="6" fill="#ffff00"
-                                style="filter: drop-shadow(0 0 8px #ffff00);" />
-                        </svg>
-                        <h3 style="font-size: 1.2em; margin-top:0.6em;">Interactive Card</h3>
-                        <p style="font-size: 0.8em; line-height: 1.4;">Make a cool rocket card that lights up when you
-                            push it!</p>
+                <section>
+                    <h2>Paper Circuit <span class='highlight'>Inspiration</span> 🌟</h2>
+                    <p class='big-emoji'>✨ 🎨 💡</p>
+                    <p>Check out what others are creating!</p>
+                </section>
+                <section>
+                    <h3>Parallel Circuit Action! ⭐</h3>
+                    <div style='display: flex; justify-content: center;'>
+                        <img src='assets/Interactive_STEAM_parallel_circuit.gif' alt='Interactive Parallel Circuit' style='max-height: 500px; border-radius: 12px;'>
                     </div>
-                    <div class="concept-box"
-                        style="width: 300px; text-align: center; border-left: none; border-top: 6px solid #ffcc00; border-radius: 12px; padding: 2em 1em;">
-                        <svg width="200" height="150" viewBox="0 0 200 150"
-                            style="background: #4a2a6a; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); width: 100%;">
-                            <rect x="95" y="80" width="10" height="60" fill="#b87333" />
-                            <path
-                                d="M 100 20 L 115 50 L 150 55 L 125 75 L 130 105 L 100 90 L 70 105 L 75 75 L 50 55 L 85 50 Z"
-                                fill="#ffcc00" />
-                            <circle cx="100" cy="65" r="12" fill="#ffffff"
-                                style="filter: drop-shadow(0 0 10px #ffff00);" />
-                            <circle cx="100" cy="65" r="6" fill="#ffffaa" />
-                        </svg>
-                        <h3 style="font-size: 1.2em; margin-top:0.6em;">Magic Wand</h3>
-                        <p style="font-size: 0.8em; line-height: 1.4;">Make a wand out of paper and place an LED right
-                            at the tip of the star.</p>
+                    <p style='font-size: 0.8em; margin-top: 1em;'>See a super star light up!</p>
+                </section>
+                <section>
+                    <h3>Holiday Card Project 💌</h3>
+                    <div style='display: flex; justify-content: center;'>
+                        <img src='assets/DIY_Happy_holidays_card_Easy_and_fun_paper_circuit_for_beginners.gif' alt='Holiday Card Circuit' style='max-height: 500px; border-radius: 12px;'>
                     </div>
-                    <div class="concept-box"
-                        style="width: 300px; text-align: center; border-left: none; border-top: 6px solid #4d79ff; border-radius: 12px; padding: 2em 1em;">
-                        <svg width="200" height="150" viewBox="0 0 200 150"
-                            style="background: #225544; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); width: 100%;">
-                            <rect x="60" y="40" width="80" height="70" rx="10" fill="#aaa" />
-                            <rect x="50" y="60" width="10" height="20" fill="#777" />
-                            <rect x="140" y="60" width="10" height="20" fill="#777" />
-                            <line x1="100" y1="40" x2="100" y2="15" stroke="#777" stroke-width="4" />
-                            <circle cx="100" cy="15" r="6" fill="#ff4d4d" />
-                            <circle cx="80" cy="65" r="10" fill="#00ffff"
-                                style="filter: drop-shadow(0 0 8px #00ffff);" />
-                            <circle cx="120" cy="65" r="10" fill="#00ffff"
-                                style="filter: drop-shadow(0 0 8px #00ffff);" />
-                            <rect x="75" y="90" width="50" height="10" rx="4" fill="#333" />
-                            <line x1="85" y1="90" x2="85" y2="100" stroke="#aaa" stroke-width="2" />
-                            <line x1="95" y1="90" x2="95" y2="100" stroke="#aaa" stroke-width="2" />
-                            <line x1="105" y1="90" x2="105" y2="100" stroke="#aaa" stroke-width="2" />
-                            <line x1="115" y1="90" x2="115" y2="100" stroke="#aaa" stroke-width="2" />
-                        </svg>
-                        <h3 style="font-size: 1.2em; margin-top:0.6em;">Paper Robot</h3>
-                        <p style="font-size: 0.8em; line-height: 1.4;">Add LED eyes to your paper robot for a futuristic
-                            look!</p>
+                    <p style='font-size: 0.8em; margin-top: 1em;'>Easy and fun paper circuit for beginners!</p>
+                </section>
+                <section>
+                    <h3>Make a splash! 🌊</h3>
+                    <div style='display: flex; justify-content: center;'>
+                        <img src='assets/led_circuit_paper.gif' alt='LED Circuit Art' style='max-height: 500px; border-radius: 12px;'>
                     </div>
-                </div>
+                    <p style='font-size: 0.8em; margin-top: 1em;'>See how circuits can make your art glow!</p>
+                </section>
+                <section>
+                    <h3>Start your engines! 🏎️</h3>
+                    <div style='display: flex; justify-content: center;'>
+                        <img src='assets/led_strip_paper.gif' alt='LED Strip Art' style='max-height: 500px; border-radius: 12px;'>
+                    </div>
+                    <p style='font-size: 0.8em; margin-top: 1em;'>Amazing glowing effects with simple paper strips!</p>
+                </section>
+                <section>
+                    <h3>Bright Flowers! 🌻</h3>
+                    <div style='display: flex; justify-content: center;'>
+                        <img src='assets/led_butterfly.gif' alt='Butterfly LED Art' style='max-height: 500px; border-radius: 12px;'>
+                    </div>
+                    <p style='font-size: 0.8em; margin-top: 1em;'>Make your colorful flowers brighter!</p>
+                </section>
+                <section>
+                    <h3>Under the Sea! 🐟</h3>
+                    <div style='display: flex; justify-content: center;'>
+                        <img src='assets/led_pop_up.gif' alt='Pop-up LED Art' style='max-height: 500px; border-radius: 12px;'>
+                    </div>
+                    <p style='font-size: 0.8em; margin-top: 1em;'>Help the fish catch its food!</p>
+                </section>
             </section>
+
         </div>
     </div>
 
